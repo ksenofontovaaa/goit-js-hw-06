@@ -15,11 +15,9 @@ form.addEventListener('submit', onSubmit);
 
 function onSubmit(evt){
     evt.preventDefault();
-    if (form[0].value || form[1].value === ''){
+    if (form[0].value==='' || form[1].value === ''){
 alert('Заповніть усі поля');
     }
-
-    console.log('email:', form[0].value);
-    console.log('password:', form[1].value);
+console.log({email:`${form[0].value}`, password:`${form[1].value}`});
     form.reset();
 }
